@@ -25,6 +25,11 @@ module.exports = {
           light: '#B9B3AA',
           DEFAULT: '#B9B3AA',
           dark: '#B9B3AA'
+        },
+        purpleColor: {
+          light: '#681f7c',
+          DEFAULT: '#681f7c',
+          dark: '#681f7c'
         }
       }
     }

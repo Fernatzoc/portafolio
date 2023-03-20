@@ -10,6 +10,11 @@ const firaCode = localFont({
       style: 'normal'
     },
     {
+      path: '../../public/assets/fonts/FiraCode-SemiBold.woff2',
+      weight: '600',
+      style: 'normal'
+    },
+    {
       path: '../../public/assets/fonts/FiraCode-Bold.woff2',
       weight: '700',
       style: 'normal'
