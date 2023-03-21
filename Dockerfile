@@ -9,7 +9,7 @@ COPY package*.json ./
 
 # Install dependencies
 RUN npm install -g yarn --force
-RUN yarn install --production
+RUN yarn install
 
 # Copy application source code
 COPY . .
