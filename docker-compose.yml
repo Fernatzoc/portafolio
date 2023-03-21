@@ -17,9 +17,9 @@ services:
       - ./nginx/html:/usr/share/nginx/html
     depends_on:
       - app
-  # certbot:
-  #   image: certbot/certbot
-  #   restart: always
-  #   volumes:
-  #     - ./nginx/certs:/etc/letsencrypt
-  #   command: certonly --webroot --webroot-path=/usr/share/nginx/html --email fernandotzoc4@gmail.com --agree-tos --no-eff-email -d fernandotzoc.dev -d www.fernandotzoc.dev
+  certbot:
+    image: certbot/certbot
+    restart: always
+    volumes:
+      - ./nginx/certs:/etc/letsencrypt
+    command: certonly --webroot --webroot-path=/usr/share/nginx/html --email fernandotzoc4@gmail.com --agree-tos --no-eff-email -d fernandotzoc.dev -d www.fernandotzoc.dev
