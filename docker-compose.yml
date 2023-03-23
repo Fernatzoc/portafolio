@@ -22,7 +22,7 @@ services:
 
   certbot:
     image: certbot/certbot:latest
-    command: certonly --webroot --webroot-path /var/www/certbot --email fernandotzoc4@gmail.com --agree-tos -d fernandotzoc.dev
+    command: certonly --preferred-challenges http --webroot-path /var/www/certbot --email fernandotzoc4@gmail.com --agree-tos -d fernandotzoc.dev
     volumes:
       - ./certbot/www:/var/www/certbot/:rw
       - ./certbot/conf/:/etc/letsencrypt/:rw
