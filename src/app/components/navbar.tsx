@@ -6,7 +6,7 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <nav className='flex flex-wrap items-center justify-between  p-6 lg:pr-0 lg:pl-0'>
+    <nav className='sticky top-0 z-50 bg-customBGColor flex flex-wrap items-center justify-between p-6'>
       <div className='flex items-center flex-shrink-0 text-white mr-6'>
         <span className='font-semibold text-xl tracking-tight'>Fernando</span>
       </div>
