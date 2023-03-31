@@ -1,0 +1,22 @@
+{
+  "Index": {
+    "title": "Hola Mundo!"
+  },
+  "Navbar": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "projects": "Proyectos"
+  },
+  "FirstSection": {
+    "h1": "Fernando es <span>diseñador web</span> y desarrollador <span>front-end</span>",
+    "description": "Crea sitios web con capacidad de respuesta en los que las tecnologías se unen a la creatividad",
+    "contact": "Contacta ##"
+  },
+  "Projects": {
+    "title": "Proyectos",
+    "seeMore": "Ver más"
+  },
+  "ProjectCard": {
+    "button": "Ver"
+  }
+}

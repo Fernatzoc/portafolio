@@ -1,9 +1,11 @@
 'use client'
 import Link from 'next/link'
 import { useState } from 'react'
+import { useTranslations } from 'next-intl'
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const t = useTranslations('Navbar')
 
   return (
     <nav className='sticky top-0 z-50 bg-customBGColor flex flex-wrap items-center justify-between p-6'>
@@ -24,13 +26,19 @@ export const Navbar = () => {
       <div className={`w-full ${isOpen ? '' : 'hidden'} lg:flex lg:items-center lg:w-auto`}>
         <div className='text-sm lg:flex-grow'>
           <Link href='/' className='text-fontColor hover:text-white block mt-4 lg:inline-block lg:mt-0 mr-4 hashtag'>
-            home
+            {t('home')}
           </Link>
           <Link href='/about' className='text-fontColor hover:text-white block mt-4 lg:inline-block lg:mt-0 mr-4 hashtag'>
-            projects
+            {t('about')}
           </Link>
-          <Link href='/contact' className='text-fontColor hover:text-white block mt-4 lg:inline-block lg:mt-0 hashtag'>
-            about-me
+          <Link href='/projects' className='text-fontColor hover:text-white block mt-4 lg:inline-block lg:mt-0 hashtag mr-4'>
+            {t('projects')}
+          </Link>
+          <Link href='/es' locale='es' className='text-fontColor hover:text-white block mt-4 lg:inline-block lg:mt-0 mr-4'>
+            Es
+          </Link>
+          <Link href='/en' locale='en' className='text-fontColor hover:text-white block mt-4 lg:inline-block lg:mt-0'>
+            En
           </Link>
         </div>
       </div>

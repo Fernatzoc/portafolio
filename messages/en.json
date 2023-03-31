@@ -1,0 +1,22 @@
+{
+  "Index": {
+    "title": "Hello world!"
+  },
+  "Navbar": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects"
+  },
+  "FirstSection": {
+    "h1": "Fernando is a <span>web designer</span> and <span>front-end</span> developer",
+    "description": "He crafts responsive websites where technologies meet creativity",
+    "contact": "Contact ME ##"
+  },
+  "Projects": {
+    "title": "Projects",
+    "seeMore": "See more"
+  },
+  "ProjectCard": {
+    "button": "Live"
+  }
+}
