@@ -1,4 +1,4 @@
-'use client'
+// 'use client'
 import { ProjectCard } from './projectCard'
 import { useTranslations } from 'next-intl'
 

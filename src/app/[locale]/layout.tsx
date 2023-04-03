@@ -1,7 +1,7 @@
-import React from 'react'
 import './globals.css'
+import React from 'react'
 import localFont from '@next/font/local'
-import { NextIntlClientProvider } from 'next-intl/client'
+import { useLocale } from 'next-intl'
 import { notFound } from 'next/navigation'
 
 const firaCode = localFont({
@@ -31,25 +31,17 @@ const firaCode = localFont({
   variable: '--font-firacode'
 })
 
-export function generateStaticParams () {
-  return [{ locale: 'en' }, { locale: 'es' }]
-}
+export default function LocaleLayout ({ children, params } : { children: React.ReactNode, params: any }) {
+  const locale = useLocale()
 
-export default async function LocaleLayout ({ children, params: { locale } }: any) {
-  let messages
-  try {
-    messages = (await import(`../../../messages/${locale}.json`)).default
-  } catch (error) {
+  // Show a 404 error if the user requests an unknown locale
+  if (params.locale !== locale) {
     notFound()
   }
 
   return (
     <html lang={locale} className={firaCode.variable}>
-      <body className='bg-customBGColor text-white tracking-wider leading-relaxed'>
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          {children}
-        </NextIntlClientProvider>
-      </body>
+      <body className='bg-customBGColor text-white tracking-wider leading-relaxed'>{children}</body>
     </html>
   )
 }

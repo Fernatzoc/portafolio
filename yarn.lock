@@ -304,11 +304,6 @@
     "@typescript-eslint/types" "5.52.0"
     eslint-visitor-keys "^3.3.0"
 
-accept-language-parser@^1.5.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/accept-language-parser/-/accept-language-parser-1.5.0.tgz#8877c54040a8dcb59e0a07d9c1fde42298334791"
-  integrity sha512-QhyTbMLYo0BBGg1aWbeMG4ekWtds/31BrEU+DONOg/7ax23vxpL03Pb7/zBmha2v7vdD3AyzZVWBVGEZxKOXWw==
-
 acorn-jsx@^5.3.2:
   version "5.3.2"
   resolved "https://registry.yarnpkg.com/acorn-jsx/-/acorn-jsx-5.3.2.tgz#7ed5bb55908b3b2f1bc55c6af1653bada7f07937"
@@ -1767,13 +1762,20 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
 
-next-intl@^2.12.0:
-  version "2.12.0"
-  resolved "https://registry.yarnpkg.com/next-intl/-/next-intl-2.12.0.tgz#36c57a31381479ebc8eddf3e10d3ffdcd266bc68"
-  integrity sha512-UWKLA3BIsezFo/OJelGYmJL3BsztApo2mgvmwHMDbTsuBJx0x4SaIIPapnPHPzMhUbppZIbY70xNIULHwn++hg==
+negotiator@0.6.3:
+  version "0.6.3"
+  resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.3.tgz#58e323a72fedc0d6f9cd4d31fe49f51479590ccd"
+  integrity sha512-+EUsqGPLsM+j/zdChZjsnX51g4XrHFOIXwfnCVPGlQk/k5giakcKsuxCObBRu6DSm9opw/O6slWbJdghQM4bBg==
+
+next-intl@2.12.0-beta.5:
+  version "2.12.0-beta.5"
+  resolved "https://registry.yarnpkg.com/next-intl/-/next-intl-2.12.0-beta.5.tgz#cbc58c291424942e5a83ab5da7173d1e446f6cd0"
+  integrity sha512-L5C0hSMiofxUTypG8tIt3l4CZXJYMAfGKdVDmPex7XqgrB7HLnclSukzWJcZKdT4xDFf/DGlU8xVk2GPzJ5SGg==
   dependencies:
-    accept-language-parser "^1.5.0"
-    use-intl "^2.12.0"
+    "@formatjs/intl-localematcher" "0.2.32"
+    negotiator "0.6.3"
+    server-only "0.0.1"
+    use-intl "2.12.0-alpha.1"
 
 next@13.1.6:
   version "13.1.6"
@@ -2236,6 +2238,11 @@ semver@^7.0.0, semver@^7.3.7, semver@^7.3.8:
   dependencies:
     lru-cache "^6.0.0"
 
+server-only@0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/server-only/-/server-only-0.0.1.tgz#0f366bb6afb618c37c9255a314535dc412cd1c9e"
+  integrity sha512-qepMx2JxAa5jjfzxG79yPPq+8BuFToHd1hm7kI+Z4zAq1ftQiP7HcxMhDDItrbtwVeLg/cY2JnKnrcFkmiswNA==
+
 shebang-command@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/shebang-command/-/shebang-command-2.0.0.tgz#ccd0af4f8835fbdc265b82461aaf0c36663f34ea"
@@ -2516,10 +2523,10 @@ uri-js@^4.2.2:
   dependencies:
     punycode "^2.1.0"
 
-use-intl@^2.12.0:
-  version "2.12.0"
-  resolved "https://registry.yarnpkg.com/use-intl/-/use-intl-2.12.0.tgz#66f39d1ab387b4562caff66aee0927ae6564bbc4"
-  integrity sha512-LcmAqn78o6Ii9wsLERKAXI9QfiSVBzY3u+mSh6YCLUKhDhr7WHqTBfhEV1gZvdwy7mydhwWQUyQ9Zy5XHuUOAQ==
+use-intl@2.12.0-alpha.1:
+  version "2.12.0-alpha.1"
+  resolved "https://registry.yarnpkg.com/use-intl/-/use-intl-2.12.0-alpha.1.tgz#ef6a5e000130ab407531b6ac529ceae33e664393"
+  integrity sha512-loPULCGEhgl7EuNL/br1d1DeDJXeiXiE+S3PmZUaZgLBiYB0XzfVaheXFt/y+dpVBEslhhXzxJuo3AcgZy+bzg==
   dependencies:
     "@formatjs/ecma402-abstract" "^1.11.4"
     intl-messageformat "^9.3.18"

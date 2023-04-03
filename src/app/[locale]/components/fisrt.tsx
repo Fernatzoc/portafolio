@@ -1,4 +1,4 @@
-'use client'
+// 'use client'
 import Image from 'next/image'
 import devImage from '../../../../public/assets/Images/devImage.jpg'
 import Link from 'next/link'
