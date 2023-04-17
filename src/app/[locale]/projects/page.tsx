@@ -1,9 +1,6 @@
-import { useTranslations } from 'next-intl'
-import { Navbar } from '../components/navbar'
 
 export default function ProjectsPage () {
-  const t = useTranslations('Navbar')
   return (
-    <Navbar paths={['', 'about', 'projects']} titles={[t('home'), t('about'), t('projects')]} />
+    <h2>Projects</h2>
   )
 }

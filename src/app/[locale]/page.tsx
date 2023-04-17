@@ -1,17 +1,19 @@
-import { useTranslations } from 'next-intl'
+import { About } from './components/about'
+import { Contact } from './components/contact'
 import { Fisrt } from './components/fisrt'
-import { Navbar } from './components/navbar'
+import { Footer } from './components/footer'
 import { Projects } from './components/projects'
+import { Skills } from './components/skills'
 
 export default function Index () {
-  const t = useTranslations('Navbar')
   return (
     <>
-      <div className='max-w-screen-lg mx-auto'>
-        <Navbar paths={['', 'about', 'projects']} titles={[t('home'), t('about'), t('projects')]} />
-        <Fisrt />
-        <Projects />
-      </div>
+      <Fisrt />
+      <Projects />
+      <Skills />
+      <About />
+      <Contact />
+      <Footer />
     </>
 
   )

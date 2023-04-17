@@ -1,14 +1,14 @@
 import './globals.css'
 import React from 'react'
 import localFont from '@next/font/local'
-import { useLocale } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import { notFound } from 'next/navigation'
+import { Navbar } from './components/navbar'
 
 const firaCode = localFont({
   src: [
     {
       path: '../../../public/assets/fonts/FiraCode-Regular.woff2',
-
       weight: '400',
       style: 'normal'
     },
@@ -20,12 +20,12 @@ const firaCode = localFont({
     {
       path: '../../../public/assets/fonts/FiraCode-SemiBold.woff2',
       weight: '600',
-      style: 'normal'
+      style: 'semi-bold'
     },
     {
       path: '../../../public/assets/fonts/FiraCode-Bold.woff2',
       weight: '700',
-      style: 'normal'
+      style: 'bold'
     }
   ],
   variable: '--font-firacode'
@@ -33,6 +33,7 @@ const firaCode = localFont({
 
 export default function LocaleLayout ({ children, params } : { children: React.ReactNode, params: any }) {
   const locale = useLocale()
+  const t = useTranslations('Navbar')
 
   // Show a 404 error if the user requests an unknown locale
   if (params.locale !== locale) {
@@ -41,7 +42,10 @@ export default function LocaleLayout ({ children, params } : { children: React.R
 
   return (
     <html lang={locale} className={firaCode.variable}>
-      <body className='bg-customBGColor text-white tracking-wider leading-relaxed'>{children}</body>
+      <body className='bg-customBGColor tracking-wider leading-relaxed max-w-screen-lg mx-auto'>
+        <Navbar paths={['', 'about', 'projects']} titles={[t('home'), t('about'), t('projects')]} />
+        {children}
+      </body>
     </html>
   )
 }
