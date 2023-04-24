@@ -5,7 +5,7 @@ import logo from '../../../../public/assets/Images/logoName.svg'
 export const Footer = () => {
   return (
     <footer className='m-5 mt-28 border-t border-solid border-borderColor'>
-      <div className='flex mt-8'>
+      <div className='flex mt-8 flex-col lg:flex-row gap-10'>
         <div className='w-3/4'>
           <div className='flex gap-8'>
             <div className='flex gap-2'>
@@ -37,7 +37,7 @@ export const Footer = () => {
 
         </div>
       </div>
-      <div className='mt-12 flex justify-center'>
+      <div className='mt-12 text-center'>
         <p>© {new Date().getFullYear()} Fernando. All rights reserved.</p>
       </div>
     </footer>

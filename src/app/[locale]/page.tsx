@@ -1,7 +1,6 @@
-import { About } from './components/about'
+import { About } from './components'
 import { Contact } from './components/contact'
 import { Fisrt } from './components/fisrt'
-import { Footer } from './components/footer'
 import { Projects } from './components/projects'
 import { Skills } from './components/skills'
 
@@ -13,7 +12,6 @@ export default function Index () {
       <Skills />
       <About />
       <Contact />
-      <Footer />
     </>
 
   )

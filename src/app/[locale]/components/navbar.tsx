@@ -5,6 +5,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import logo from '../../../../public/assets/Images/logoName.svg'
 interface Props {
+  curLocale: string
   titles: string[]
   paths: string[]
 }
@@ -12,7 +13,7 @@ interface Props {
 export const Navbar = (props: Props) => {
   const pathname = usePathname()
   const [isOpen, setIsOpen] = useState(false)
-  const { titles, paths } = props
+  const { curLocale, titles, paths } = props
 
   return (
     <nav className='sticky top-0 z-50 bg-customBGColor flex flex-wrap items-center justify-between p-6'>
@@ -50,12 +51,13 @@ export const Navbar = (props: Props) => {
               )
             })
           }
-          <Link href={`${pathname}`} locale='es' className='text-fontColor hover:text-white block mt-4 lg:inline-block lg:mt-0 mr-4'>
-            Es
-          </Link>
-          <Link href={`${pathname}`} locale='en' className='text-fontColor hover:text-white block mt-4 lg:inline-block lg:mt-0'>
+          <Link href={`${pathname}`} locale='en' className={`text-fontColor hover:text-white block mt-4 lg:inline-block lg:mt-0 mr-4 ${curLocale === 'en' ? 'text-white' : ''}`}>
             En
           </Link>
+          <Link href={`${pathname}`} locale='es' className={`text-fontColor hover:text-white block mt-4 lg:inline-block lg:mt-0 ${curLocale === 'es' ? 'text-white' : ''}`}>
+            Es
+          </Link>
+
         </div>
       </div>
     </nav>

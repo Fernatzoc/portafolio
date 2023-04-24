@@ -3,9 +3,9 @@
     "title": "Hello world!"
   },
   "Navbar": {
-    "home": "Home",
-    "about": "About",
-    "projects": "Projects"
+    "home": "home",
+    "about": "about-me",
+    "projects": "projects"
   },
   "FirstSection": {
     "h1": "Fernando is a <span>web designer</span> and <span>front-end</span> developer",
