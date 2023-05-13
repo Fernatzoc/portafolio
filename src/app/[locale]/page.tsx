@@ -1,10 +1,6 @@
-import { About } from './components'
-import { Contact } from './components/contact'
-import { Fisrt } from './components/fisrt'
-import { Projects } from './components/projects'
-import { Skills } from './components/skills'
+import { Fisrt, Projects, Skills, About, Contact } from './components'
 
-export default function Index () {
+export default function Index() {
   return (
     <>
       <Fisrt />
@@ -13,6 +9,5 @@ export default function Index () {
       <About />
       <Contact />
     </>
-
   )
 }

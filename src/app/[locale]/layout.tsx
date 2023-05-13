@@ -1,12 +1,11 @@
 import './globals.css'
 import 'animate.css'
-import React from 'react'
-import localFont from '@next/font/local'
-import { useLocale, useTranslations } from 'next-intl'
+import { Footer, Navbar } from './components'
 import { notFound } from 'next/navigation'
-import { Navbar } from './components/navbar'
-import { Footer } from './components/footer'
+import { useLocale, useTranslations } from 'next-intl'
 import Head from './head'
+import localFont from '@next/font/local'
+import React from 'react'
 
 const firaCode = localFont({
   src: [
@@ -34,7 +33,13 @@ const firaCode = localFont({
   variable: '--font-firacode'
 })
 
-export default function LocaleLayout ({ children, params } : { children: React.ReactNode, params: any }) {
+export default function LocaleLayout({
+  children,
+  params
+}: {
+  children: React.ReactNode
+  params: any
+}) {
   const locale = useLocale()
   const t = useTranslations('Navbar')
 
@@ -49,7 +54,11 @@ export default function LocaleLayout ({ children, params } : { children: React.R
         <Head />
       </head>
       <body className='bg-customBGColor tracking-wider leading-relaxed max-w-screen-lg mx-auto'>
-        <Navbar curLocale={locale} paths={['', 'projects', 'about']} titles={[t('home'), t('projects'), t('about')]} />
+        <Navbar
+          curLocale={locale}
+          paths={['', 'projects', 'about']}
+          titles={[t('home'), t('projects'), t('about')]}
+        />
         {children}
         <Footer />
       </body>

@@ -1,5 +1,4 @@
-// 'use client'
-import { ProjectCard } from './projectCard'
+import { ProjectCard } from './ProjectCard'
 import { useTranslations } from 'next-intl'
 
 export const Projects = () => {
@@ -17,7 +16,6 @@ export const Projects = () => {
         <ProjectCard />
         <ProjectCard />
       </div>
-
     </section>
   )
 }

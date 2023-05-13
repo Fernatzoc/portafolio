@@ -1,5 +1,5 @@
-import Image from 'next/image'
 import emailIcon from '../../../../public/assets/Images/email.svg'
+import Image from 'next/image'
 import logo from '../../../../public/assets/Images/logoName.svg'
 
 export const Footer = () => {
@@ -9,32 +9,23 @@ export const Footer = () => {
         <div className='w-3/4'>
           <div className='flex gap-8'>
             <div className='flex gap-2'>
-              <Image
-                src={logo}
-                alt='logo icon'
-              />
+              <Image src={logo} alt='logo icon' />
               <p className='text-fontColorTitles font-bold'>Fernando</p>
-            </div> <p>fernandotzoc4@gmail.com</p>
+            </div>{' '}
+            <p>fernandotzoc4@gmail.com</p>
           </div>
-          <p className='mt-5 text-fontColorTitles'>Web designer and front-end developer</p>
+          <p className='mt-5 text-fontColorTitles'>
+            Web designer and front-end developer
+          </p>
         </div>
-        <div className='w-1/4'><h3 className='text-xl font-medium'>Media</h3>
+        <div className='w-1/4'>
+          <h3 className='text-xl font-medium'>Media</h3>
 
           <div className='flex'>
-            <Image
-              src={emailIcon}
-              alt='email icon'
-            />
-            <Image
-              src={emailIcon}
-              alt='email icon'
-            />
-            <Image
-              src={emailIcon}
-              alt='email icon'
-            />
+            <Image src={emailIcon} alt='email icon' />
+            <Image src={emailIcon} alt='email icon' />
+            <Image src={emailIcon} alt='email icon' />
           </div>
-
         </div>
       </div>
       <div className='mt-12 text-center'>

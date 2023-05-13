@@ -9,7 +9,10 @@ export const Head = ({ title, description, ogImage }: Props) => {
     <>
       <title>{title}</title>
       <meta name='description' content={description} />
-      <meta name='viewport' content='width=device-width,minimum-scale=1,initial-scale=1' />
+      <meta
+        name='viewport'
+        content='width=device-width,minimum-scale=1,initial-scale=1'
+      />
       <meta property='og:title' content={title} />
       <meta property='og:description' content={description} />
       <meta property='og:image' content={ogImage} />

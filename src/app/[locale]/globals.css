@@ -3,15 +3,20 @@
 @tailwind utilities;
 
 .hashtag::before {
-  content: "#";
-  color: #C778DD;
+  content: '#';
+  color: #c778dd;
 }
 
 h1 span {
-  color: #C778DD;
+  color: #c778dd;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: #ffffff;
 }
 

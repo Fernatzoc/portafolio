@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl'
-import Image from 'next/image'
 import devImage from '../../../../public/assets/Images/devImage.jpg'
+import Image from 'next/image'
 
 export const About = () => {
   const t = useTranslations('About')

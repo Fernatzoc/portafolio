@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl'
-import Image from 'next/image'
 import emailIcon from '../../../../public/assets/Images/email.svg'
+import Image from 'next/image'
 
 export const Contact = () => {
   const t = useTranslations('Contacts')
@@ -14,23 +14,18 @@ export const Contact = () => {
         </div>
 
         <div className='border border-solid border-borderColor p-6'>
-          <p className='font-semibold text-fontColorTitles mb-2'>{t('messageBox')}</p>
+          <p className='font-semibold text-fontColorTitles mb-2'>
+            {t('messageBox')}
+          </p>
           <div className='flex justify-center items-center'>
-            <Image
-              src={emailIcon}
-              alt='email icon'
-            />
+            <Image src={emailIcon} alt='email icon' />
             <p>fenrandotzoc5@gmail.com</p>
           </div>
           <div className='flex justify-center items-center'>
-            <Image
-              src={emailIcon}
-              alt='email icon'
-            />
+            <Image src={emailIcon} alt='email icon' />
             <p>fenrandotzoc5@gmail.com</p>
           </div>
         </div>
-
       </div>
     </section>
   )

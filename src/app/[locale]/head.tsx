@@ -1,6 +1,6 @@
-import { Head } from './components/Head'
+import { Head } from './components'
 
-export default function rootHead () {
+export default function rootHead() {
   return (
     <Head
       title='Fernando Tzoc'
