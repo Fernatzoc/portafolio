@@ -1,7 +1,7 @@
 'use client'
-import { Link } from 'next-intl'
+import Link from 'next-intl/link'
 import { usePathname } from 'next-intl/client'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import logo from '../../../../public/assets/Images/logoName.svg'
 interface Props {
@@ -11,9 +11,34 @@ interface Props {
 }
 
 export const Navbar = (props: Props) => {
+  const initialThemeState = () => {
+    if (localStorage.getItem('theme')) {
+      return localStorage.getItem('theme') as 'light' | 'dark'
+    }
+
+    return window.matchMedia('(prefers-color-scheme: dark)').matches
+      ? 'dark'
+      : 'light'
+  }
+
   const pathname = usePathname()
   const [isOpen, setIsOpen] = useState(false)
+  const [theme, setTheme] = useState<'light' | 'dark'>(initialThemeState)
   const { curLocale, titles, paths } = props
+
+  useEffect(() => {
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+
+    localStorage.setItem('theme', theme)
+  }, [theme])
+
+  const handleTheme = () => {
+    setTheme(theme === 'light' ? 'dark' : 'light')
+  }
 
   return (
     <nav className='sticky top-0 z-50 bg-customBGColor flex flex-wrap items-center justify-between p-6'>
@@ -73,6 +98,10 @@ export const Navbar = (props: Props) => {
           >
             Es
           </Link>
+
+          <button onClick={handleTheme}>
+            <h2>Dark Mode</h2>
+          </button>
         </div>
       </div>
     </nav>

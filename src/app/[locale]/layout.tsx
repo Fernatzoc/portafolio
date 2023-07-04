@@ -1,10 +1,9 @@
 import './globals.css'
-import 'animate.css'
 import { Footer, Navbar } from './components'
 import { notFound } from 'next/navigation'
 import { useLocale, useTranslations } from 'next-intl'
 import Head from './head'
-import localFont from '@next/font/local'
+import localFont from 'next/font/local'
 import React from 'react'
 
 const firaCode = localFont({
@@ -53,7 +52,7 @@ export default function LocaleLayout({
       <head>
         <Head />
       </head>
-      <body className='bg-customBGColor tracking-wider leading-relaxed max-w-screen-lg mx-auto'>
+      <body className='bg-white dark:bg-customBGColor tracking-wider leading-relaxed max-w-screen-lg mx-auto'>
         <Navbar
           curLocale={locale}
           paths={['', 'projects', 'about']}

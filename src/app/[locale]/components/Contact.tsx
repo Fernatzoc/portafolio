@@ -6,7 +6,7 @@ export const Contact = () => {
   const t = useTranslations('Contacts')
 
   return (
-    <section className='m-5 mt-36  animate__animated animate__fadeInDown'>
+    <section className='m-5 mt-36'>
       <h2 className='hashtag text-3xl font-medium'>{t('title')}</h2>
       <div className='flex gap-10 flex-col lg:flex-row'>
         <div className='mt-5 lg:w-2/3'>
