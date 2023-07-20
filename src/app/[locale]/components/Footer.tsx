@@ -10,16 +10,22 @@ export const Footer = () => {
           <div className='flex gap-8'>
             <div className='flex gap-2'>
               <Image src={logo} alt='logo icon' />
-              <p className='text-fontColorTitles font-bold'>Fernando</p>
+              <p className='text-fontColor-light dark:text-fontColor-dark font-bold'>
+                Fernando
+              </p>
             </div>{' '}
-            <p>fernandotzoc4@gmail.com</p>
+            <p className='text-fontColor-light dark:text-fontColor-dark'>
+              fernandotzoc4@gmail.com
+            </p>
           </div>
-          <p className='mt-5 text-fontColorTitles'>
+          <p className='mt-5 text-fontColor-light dark:text-fontColor-dark'>
             Web designer and front-end developer
           </p>
         </div>
         <div className='w-1/4'>
-          <h3 className='text-xl font-medium'>Media</h3>
+          <h3 className='text-xl font-medium text-fontColorTitles-light dark:text-fontColorTitles-dark'>
+            Media
+          </h3>
 
           <div className='flex'>
             <Image src={emailIcon} alt='email icon' />
@@ -28,7 +34,7 @@ export const Footer = () => {
           </div>
         </div>
       </div>
-      <div className='mt-12 text-center'>
+      <div className='mt-12 text-center text-fontColor-light dark:text-fontColor-dark'>
         <p>© {new Date().getFullYear()} Fernando. All rights reserved.</p>
       </div>
     </footer>

@@ -12,13 +12,11 @@ interface Props {
 
 export const Navbar = (props: Props) => {
   const initialThemeState = () => {
-    if (localStorage.getItem('theme')) {
+    if (typeof window !== 'undefined' && localStorage.getItem('theme')) {
       return localStorage.getItem('theme') as 'light' | 'dark'
+    } else {
+      return 'dark'
     }
-
-    return window.matchMedia('(prefers-color-scheme: dark)').matches
-      ? 'dark'
-      : 'light'
   }
 
   const pathname = usePathname()
@@ -41,10 +39,12 @@ export const Navbar = (props: Props) => {
   }
 
   return (
-    <nav className='sticky top-0 z-50 flex flex-wrap items-center justify-between bg-customBGColor p-6'>
+    <nav className='sticky top-0 z-50 flex flex-wrap items-center justify-between bg-customBGColor-light dark:bg-customBGColor-dark p-6 border-b border-solid border-borderColor'>
       <div className='mr-6 flex flex-shrink-0 items-center gap-2 text-fontColorTitles'>
         <Image src={logo} alt='logo icon' />
-        <span className='text-xl font-semibold tracking-tight'>Fernando</span>
+        <span className='text-xl font-semibold tracking-tight text-fontColorTitles-light dark:text-fontColorTitles-dark'>
+          Fernando
+        </span>
       </div>
       <div className='block lg:hidden'>
         <button
@@ -71,8 +71,10 @@ export const Navbar = (props: Props) => {
             return (
               <Link
                 href={`/${paths[index]}`}
-                className={`hashtag mt-4 mr-4 block text-fontColor hover:text-white lg:mt-0 lg:inline-block ${
-                  pathname === `/${paths[index]}` ? 'text-white' : ''
+                className={`hashtag mt-4 mr-4 block text-fontColor-light dark:text-fontColor-dark hover:text-purpleColor dark:hover:text-white lg:mt-0 lg:inline-block ${
+                  pathname === `/${paths[index]}`
+                    ? 'text-purpleColor dark:text-white'
+                    : ''
                 }`}
                 key={index}
               >

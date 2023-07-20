@@ -17,17 +17,17 @@ module.exports = {
       colors: {
         // Configure your color palette here
         customBGColor: {
-          light: '#282c33',
+          light: '#F0EEED',
           DEFAULT: '#282c33',
           dark: '#282c33'
         },
         fontColorTitles: {
-          light: '#ffffff',
+          light: '#332C39',
           DEFAULT: '#ffffff',
           dark: '#ffffff'
         },
         fontColor: {
-          light: '#abb2bf',
+          light: '#332C39',
           DEFAULT: '#abb2bf',
           dark: '#abb2bf'
         },
