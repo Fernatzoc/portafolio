@@ -9,7 +9,7 @@ export const Skills = () => {
   const t = useTranslations('Skills')
 
   return (
-    <section className='m-5 mt-36 animate__animated animate__fadeInDown'>
+    <section className='m-5 mt-36'>
       <div className='flex justify-between items-center mb-10'>
         <h2 className='hashtag text-3xl font-medium'>{t('title')}</h2>
         <p>{t('seeMore')} --&gt;</p>
