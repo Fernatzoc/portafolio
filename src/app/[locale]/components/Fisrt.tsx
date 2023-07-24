@@ -5,6 +5,16 @@ import Link from 'next/link'
 
 export const Fisrt = () => {
   const t = useTranslations('FirstSection')
+
+  const recipientEmail = 'fernandotzoc5@gmail.com'
+  const subject = 'Contacto'
+  const body = ''
+
+  // Replace spaces with "%20" in the subject and body to properly format the "mailto" link
+  const mailtoLink = `mailto:${recipientEmail}?subject=${encodeURIComponent(
+    subject
+  )}&body=${encodeURIComponent(body)}`
+
   return (
     <section className='flex flex-col m-5 gap-6 lg:flex-row lg:justify-between lg:mt-4'>
       <div className='flex flex-col gap-5 lg:w-1/2 lg:justify-center lg:gap-7'>
@@ -18,7 +28,9 @@ export const Fisrt = () => {
         </p>
         <div>
           <Link
-            href='/contact'
+            // href='/contact'
+            href={mailtoLink}
+            target='_blank'
             className='bg-transparen text-fontColorTitles-light dark:text-fontColorTitles-dark border border-purpleColor pt-2 pb-2 pr-4 pl-4 hover:bg-purpleColor hover:text-fontColor hover:border-fontColor'
           >
             {t('contact')}

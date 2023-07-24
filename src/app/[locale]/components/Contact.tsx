@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl'
-import emailIcon from '../../../../public/assets/Images/email.svg'
-import Image from 'next/image'
+// import emailIcon from '../../../../public/assets/Images/email.svg'
+// import Image from 'next/image'
+import EmailIcon from './icons/EmailIcon'
 
 export const Contact = () => {
   const t = useTranslations('Contacts')
@@ -22,17 +23,18 @@ export const Contact = () => {
             {t('messageBox')}
           </p>
           <div className='flex justify-center items-center'>
+            {/* <Image src={emailIcon} alt='email icon' /> */}
+            <EmailIcon className='fill-fontColor-light dark:fill-fontColor-dark' />
+            <p className='text-fontColor-light dark:text-fontColor-dark'>
+              fernandotzoc5@gmail.com
+            </p>
+          </div>
+          {/* <div className='flex justify-center items-center'>
             <Image src={emailIcon} alt='email icon' />
             <p className='text-fontColor-light dark:text-fontColor-dark'>
               fenrandotzoc5@gmail.com
             </p>
-          </div>
-          <div className='flex justify-center items-center'>
-            <Image src={emailIcon} alt='email icon' />
-            <p className='text-fontColor-light dark:text-fontColor-dark'>
-              fenrandotzoc5@gmail.com
-            </p>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

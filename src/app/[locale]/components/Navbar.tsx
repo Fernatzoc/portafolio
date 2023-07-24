@@ -2,8 +2,10 @@
 import Link from 'next-intl/link'
 import { usePathname } from 'next-intl/client'
 import { useEffect, useState } from 'react'
-import Image from 'next/image'
-import logo from '../../../../public/assets/Images/logoName.svg'
+import SunIcon from './icons/SunIcon'
+import MoonIcon from './icons/MoonIcon'
+import LanguajeIcon from './icons/LanguajeIcon'
+import LogoIcon from './icons/LogoIcon'
 interface Props {
   curLocale: string
   titles: string[]
@@ -41,7 +43,12 @@ export const Navbar = (props: Props) => {
   return (
     <nav className='sticky top-0 z-50 flex flex-wrap items-center justify-between bg-customBGColor-light dark:bg-customBGColor-dark p-6 border-b border-solid border-borderColor'>
       <div className='mr-6 flex flex-shrink-0 items-center gap-2 text-fontColorTitles'>
-        <Image src={logo} alt='logo icon' />
+        {/* <Image src={logo} alt='logo icon' /> */}
+        <LogoIcon
+          width={20}
+          height={20}
+          className='fill-fontColor-light dark:fill-fontColor-dark'
+        />
         <span className='text-xl font-semibold tracking-tight text-fontColorTitles-light dark:text-fontColorTitles-dark'>
           Fernando
         </span>
@@ -82,7 +89,7 @@ export const Navbar = (props: Props) => {
               </Link>
             )
           })}
-          <Link
+          {/* <Link
             href={`${pathname}`}
             locale='en'
             className={`mt-4 mr-4 block text-fontColor hover:text-white lg:mt-0 lg:inline-block ${
@@ -99,10 +106,40 @@ export const Navbar = (props: Props) => {
             }`}
           >
             Es
-          </Link>
+          </Link> */}
+
+          <div className='lg:inline-block mt-4 block'>
+            <Link
+              href={`${pathname}`}
+              locale={curLocale === 'es' ? 'en' : 'es'}
+              className='text-fontColor-light dark:text-fontColor-dark hover:text-purpleColor dark:hover:text-white'
+            >
+              <LanguajeIcon
+                width={50}
+                height={18}
+                className='inline-block fill-fontColor-light dark:fill-fontColor-dark  hover:fill-purpleColor dark:hover:fill-white'
+              />
+              {curLocale === 'es' ? 'EN' : 'ES'}
+            </Link>
+          </div>
 
           <button onClick={handleTheme}>
-            <h2>Dark Mode</h2>
+            {theme === 'light' ? (
+              <MoonIcon
+                width={50}
+                height={18}
+                className='inline-block fill-fontColor-light dark:fill-fontColor-dark hover:fill-purpleColor dark:hover:fill-white'
+              />
+            ) : (
+              <SunIcon
+                width={50}
+                height={18}
+                className='inline-block fill-fontColor-light dark:fill-fontColor-dark hover:fill-purpleColor dark:hover:fill-white'
+              />
+            )}
+            <span className='text-fontColor-light dark:text-fontColor-dark hover:text-purpleColor dark:hover:text-white '>
+              {theme === 'light' ? 'Dark Mode' : 'Light Mode'}
+            </span>
           </button>
         </div>
       </div>

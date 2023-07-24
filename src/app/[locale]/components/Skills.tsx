@@ -4,6 +4,7 @@ import Image from 'next/image'
 import points from '../../../../public/assets/Images/points.svg'
 import shape from '../../../../public/assets/Images/shape.svg'
 import square from '../../../../public/assets/Images/square.svg'
+import Link from 'next-intl/link'
 
 export const Skills = () => {
   const t = useTranslations('Skills')
@@ -14,9 +15,12 @@ export const Skills = () => {
         <h2 className='hashtag text-3xl font-medium text-fontColorTitles-light dark:text-fontColorTitles-dark'>
           {t('title')}
         </h2>
-        <p className='text-fontColorTitles-light dark:text-fontColorTitles-dark'>
+        <Link
+          className='text-fontColorTitles-light dark:text-fontColor-dark hover:text-purpleColor dark:hover:text-white'
+          href='/about'
+        >
           {t('seeMore')} --&gt;
-        </p>
+        </Link>
       </div>
 
       <div className='lg:flex gap-5'>
