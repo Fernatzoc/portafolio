@@ -2,8 +2,8 @@ import { EmailIcon, GitHubIcon, LinkedinIcon, LogoIcon } from './icons'
 
 export const Footer = () => {
   return (
-    <footer className='m-5 mt-28 border-t border-solid border-borderColor'>
-      <div className='flex mt-8 flex-col lg:flex-row gap-10'>
+    <footer className='mt-28 border-t border-solid border-borderColor'>
+      <div className='max-w-screen-lg mx-auto flex mt-8 flex-col lg:flex-row gap-10'>
         <div className='w-3/4'>
           <div className='flex gap-8'>
             <div className='flex gap-2'>
@@ -41,7 +41,7 @@ export const Footer = () => {
           </div>
         </div>
       </div>
-      <div className='mt-12 text-center text-fontColor-light dark:text-fontColor-dark'>
+      <div className='mt-12 mb-2 text-center text-fontColor-light dark:text-fontColor-dark'>
         <p>© {new Date().getFullYear()} Fernando. All rights reserved.</p>
       </div>
     </footer>

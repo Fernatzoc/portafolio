@@ -52,13 +52,13 @@ export default function LocaleLayout({
       <head>
         <Head />
       </head>
-      <body className='bg-customBGColor-light dark:bg-customBGColor-dark tracking-wider leading-relaxed max-w-screen-lg mx-auto'>
+      <body className='bg-customBGColor-light dark:bg-customBGColor-dark tracking-wider leading-relaxed'>
         <Navbar
           curLocale={locale}
           paths={['', 'projects', 'about']}
           titles={[t('home'), t('projects'), t('about')]}
         />
-        {children}
+        <main className='max-w-screen-lg mx-auto'>{children}</main>
         <Footer />
       </body>
     </html>
