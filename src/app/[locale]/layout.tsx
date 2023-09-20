@@ -48,7 +48,7 @@ export default function LocaleLayout({
   }
 
   return (
-    <html lang={locale} className={firaCode.variable}>
+    <html lang={locale} className={`${firaCode.variable} dark`}>
       <head>
         <Head />
       </head>

@@ -19,17 +19,17 @@ module.exports = {
         customBGColor: {
           light: '#F0EEED',
           DEFAULT: '#282c33',
-          dark: '#282c33'
+          dark: '#1B2430'
         },
         fontColorTitles: {
           light: '#332C39',
           DEFAULT: '#ffffff',
-          dark: '#ffffff'
+          dark: '#ccd6f6'
         },
         fontColor: {
           light: '#332C39',
           DEFAULT: '#abb2bf',
-          dark: '#abb2bf'
+          dark: '#a8b2d1'
         },
         purpleColor: {
           light: '#681f7c',
@@ -39,7 +39,7 @@ module.exports = {
         borderColor: {
           light: '#ABB2BF',
           DEFAULT: '#ABB2BF',
-          dark: '#ABB2BF'
+          dark: '#a8b2d1'
         }
       }
     }

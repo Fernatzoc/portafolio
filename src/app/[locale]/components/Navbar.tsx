@@ -70,18 +70,20 @@ export const Navbar = (props: Props) => {
           </button>
         </div>
         <div
-          className={`w-full ${isOpen ? '' : 'hidden'
-            } lg:flex lg:w-auto lg:items-center`}
+          className={`w-full ${
+            isOpen ? '' : 'hidden'
+          } lg:flex lg:w-auto lg:items-center`}
         >
           <div className='text-sm lg:flex-grow'>
             {titles.map((title, index) => {
               return (
                 <Link
                   href={`/${paths[index]}`}
-                  className={`hashtag mt-4 mr-4 block text-fontColor-light dark:text-fontColor-dark hover:text-purpleColor dark:hover:text-white lg:mt-0 lg:inline-block ${pathname === `/${paths[index]}`
+                  className={`hashtag mt-4 mr-4 block text-fontColor-light dark:text-fontColor-dark hover:text-purpleColor dark:hover:text-white lg:mt-0 lg:inline-block ${
+                    pathname === `/${paths[index]}`
                       ? 'text-purpleColor dark:text-white'
                       : ''
-                    }`}
+                  }`}
                   key={index}
                 >
                   {title}
@@ -136,9 +138,9 @@ export const Navbar = (props: Props) => {
                   className='inline-block fill-fontColor-light dark:fill-fontColor-dark hover:fill-purpleColor dark:hover:fill-white'
                 />
               )}
-              {/*<span className='text-fontColor-light dark:text-fontColor-dark hover:text-purpleColor dark:hover:text-white '>
+              {/* <span className='text-fontColor-light dark:text-fontColor-dark hover:text-purpleColor dark:hover:text-white '>
               {theme === 'light' ? 'Dark Mode' : 'Light Mode'}
-            </span>*/}
+            </span> */}
             </button>
           </div>
         </div>
