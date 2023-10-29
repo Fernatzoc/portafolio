@@ -42,9 +42,8 @@ export const Navbar = (props: Props) => {
 
   return (
     <nav className='sticky top-0 z-50 bg-customBGColor-light dark:bg-customBGColor-dark p-6 border-b border-solid border-borderColor'>
-      <div className='max-w-screen-lg mx-auto flex flex-wrap items-center justify-between'>
-        <div className='mr-6 flex flex-shrink-0 items-center gap-2 text-fontColorTitles'>
-          {/* <Image src={logo} alt='logo icon' /> */}
+      <div className='max-w-screen-lg mx-auto flex flex-wrap items-center justify-between lg:justify-between md:justify-end'>
+        <div className='mr-6 flex items-center justify-center flex-shrink-0  gap-2 text-fontColorTitles'>
           <LogoIcon
             width={20}
             height={20}
@@ -53,6 +52,38 @@ export const Navbar = (props: Props) => {
           <span className='text-xl font-semibold tracking-tight text-fontColorTitles-light dark:text-fontColorTitles-dark'>
             Fernando
           </span>
+        </div>
+        <div className='flex'>
+          <div className='inline-block lg:hidden m-0'>
+            <Link
+              href={`${pathname}`}
+              locale={curLocale === 'es' ? 'en' : 'es'}
+              className='text-fontColor-light dark:text-fontColor-dark hover:text-purpleColor dark:hover:text-white'
+            >
+              <LanguajeIcon
+                width={50}
+                height={18}
+                className='inline-block fill-fontColor-light dark:fill-fontColor-dark  hover:fill-purpleColor dark:hover:fill-white'
+              />
+              {curLocale === 'es' ? 'EN' : 'ES'}
+            </Link>
+          </div>
+
+          <button className='inline-block lg:hidden' onClick={handleTheme}>
+            {theme === 'light' ? (
+              <MoonIcon
+                width={50}
+                height={18}
+                className='inline-block fill-fontColor-light dark:fill-fontColor-dark hover:fill-purpleColor dark:hover:fill-white'
+              />
+            ) : (
+              <SunIcon
+                width={50}
+                height={18}
+                className='inline-block fill-fontColor-light dark:fill-fontColor-dark hover:fill-purpleColor dark:hover:fill-white'
+              />
+            )}
+          </button>
         </div>
         <div className='block lg:hidden'>
           <button
@@ -69,6 +100,7 @@ export const Navbar = (props: Props) => {
             </svg>
           </button>
         </div>
+
         <div
           className={`w-full ${
             isOpen ? '' : 'hidden'
@@ -90,26 +122,7 @@ export const Navbar = (props: Props) => {
                 </Link>
               )
             })}
-            {/* <Link
-            href={`${pathname}`}
-            locale='en'
-            className={`mt-4 mr-4 block text-fontColor hover:text-white lg:mt-0 lg:inline-block ${
-              curLocale === 'en' ? 'text-white' : ''
-            }`}
-          >
-            En
-          </Link>
-          <Link
-            href={`${pathname}`}
-            locale='es'
-            className={`mt-4 block text-fontColor hover:text-white lg:mt-0 lg:inline-block ${
-              curLocale === 'es' ? 'text-white' : ''
-            }`}
-          >
-            Es
-          </Link> */}
-
-            <div className='lg:inline-block mt-4 block'>
+            <div className='hidden lg:inline-block mt-4'>
               <Link
                 href={`${pathname}`}
                 locale={curLocale === 'es' ? 'en' : 'es'}
@@ -124,7 +137,7 @@ export const Navbar = (props: Props) => {
               </Link>
             </div>
 
-            <button onClick={handleTheme}>
+            <button className='hidden lg:inline-block' onClick={handleTheme}>
               {theme === 'light' ? (
                 <MoonIcon
                   width={50}
@@ -138,9 +151,6 @@ export const Navbar = (props: Props) => {
                   className='inline-block fill-fontColor-light dark:fill-fontColor-dark hover:fill-purpleColor dark:hover:fill-white'
                 />
               )}
-              {/* <span className='text-fontColor-light dark:text-fontColor-dark hover:text-purpleColor dark:hover:text-white '>
-              {theme === 'light' ? 'Dark Mode' : 'Light Mode'}
-            </span> */}
             </button>
           </div>
         </div>

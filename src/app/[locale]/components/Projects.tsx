@@ -11,9 +11,6 @@ export const Projects = () => {
         <h2 className='hashtag text-3xl font-medium text-fontColortitles-light dark:text-fontColorTitles-dark'>
           {t('title')}
         </h2>
-        {/* <p className='text-fontColorTitles-light dark:text-fontColorTitles-dark'>
-          {t('seeMore')} --&gt;
-        </p> */}
         <Link
           className='text-fontColorTitles-light dark:text-fontColor-dark hover:text-purpleColor dark:hover:text-white'
           href='/projects'

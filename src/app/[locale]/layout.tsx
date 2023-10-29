@@ -6,30 +6,30 @@ import Head from './head'
 import localFont from 'next/font/local'
 import React from 'react'
 
-const firaCode = localFont({
+const interFont = localFont({
   src: [
     {
-      path: '../../../public/assets/fonts/FiraCode-Regular.woff2',
+      path: '../../../public/assets/fonts/Inter-Regular.ttf',
       weight: '400',
       style: 'normal'
     },
     {
-      path: '../../../public/assets/fonts/FiraCode-Medium.woff2',
+      path: '../../../public/assets/fonts/Inter-Medium.ttf',
       weight: '500',
       style: 'medium'
     },
     {
-      path: '../../../public/assets/fonts/FiraCode-SemiBold.woff2',
+      path: '../../../public/assets/fonts/Inter-SemiBold.ttf',
       weight: '600',
       style: 'semi-bold'
     },
     {
-      path: '../../../public/assets/fonts/FiraCode-Bold.woff2',
+      path: '../../../public/assets/fonts/Inter-Bold.ttf',
       weight: '700',
       style: 'bold'
     }
   ],
-  variable: '--font-firacode'
+  variable: '--font-inter'
 })
 
 export default function LocaleLayout({
@@ -48,7 +48,7 @@ export default function LocaleLayout({
   }
 
   return (
-    <html lang={locale} className={`${firaCode.variable} dark`}>
+    <html lang={locale} className={`${interFont.variable} dark`}>
       <head>
         <Head />
       </head>
@@ -64,21 +64,3 @@ export default function LocaleLayout({
     </html>
   )
 }
-
-// export default function RootLayout ({ children }: {
-//   children: React.ReactNode
-// }) {
-//   return (
-//     <html lang='en' className={firaCode.variable}>
-//       {/*
-//         <head /> will contain the components returned by the nearest parent
-//         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-//       */}
-//       <head />
-//       <body
-//         className='bg-customBGColor text-white tracking-wider leading-relaxed'
-//       >{children}
-//       </body>
-//     </html>
-//   )
-// }
