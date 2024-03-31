@@ -1,31 +1,33 @@
-import { useTranslations } from 'next-intl'
+import { useTranslations } from "next-intl";
 // import emailIcon from '../../../../public/assets/Images/email.svg'
 // import Image from 'next/image'
-import EmailIcon from './icons/EmailIcon'
+import EmailIcon from "./icons/EmailIcon";
+import React, { Suspense } from "react";
+const FormContact = React.lazy(() => import("./FormContact"));
 
 export const Contact = () => {
-  const t = useTranslations('Contacts')
+  const t = useTranslations("Contacts");
 
   return (
-    <section className='m-5 mt-36'>
-      <h2 className='hashtag text-3xl font-medium text-fontColorTitles-light dark:text-fontColorTitles-dark'>
-        {t('title')}
+    <section className="m-5 mt-36">
+      <h2 className="hashtag text-3xl font-medium text-fontColorTitles-light dark:text-fontColorTitles-dark">
+        {t("title")}
       </h2>
-      <div className='flex gap-10 flex-col lg:flex-row'>
-        <div className='mt-5 lg:w-2/3'>
-          <p className='text-fontColor-light dark:text-fontColor-dark'>
-            {t('message')}
+      <div className="flex gap-10 flex-col lg:flex-row">
+        <div className="mt-5 lg:w-2/3">
+          <p className="text-fontColor-light dark:text-fontColor-dark">
+            {t("message")}
           </p>
         </div>
 
-        <div className='border border-solid border-borderColor p-6'>
-          <p className='font-semibold text-fontColorTitles-light dark:text-fontColorTitles-dark mb-2'>
-            {t('messageBox')}
+        <div className="border border-solid border-borderColor p-6">
+          <p className="font-semibold text-fontColorTitles-light dark:text-fontColorTitles-dark mb-2">
+            {t("messageBox")}
           </p>
-          <div className='flex justify-center items-center'>
+          <div className="flex justify-center items-center">
             {/* <Image src={emailIcon} alt='email icon' /> */}
-            <EmailIcon className='fill-fontColor-light dark:fill-fontColor-dark' />
-            <p className='text-fontColor-light dark:text-fontColor-dark'>
+            <EmailIcon className="fill-fontColor-light dark:fill-fontColor-dark" />
+            <p className="text-fontColor-light dark:text-fontColor-dark">
               fernandotzoc5@gmail.com
             </p>
           </div>
@@ -37,6 +39,12 @@ export const Contact = () => {
           </div> */}
         </div>
       </div>
+
+      <div>
+        <Suspense fallback={<div>Loading...</div>}>
+          <FormContact />
+        </Suspense>
+      </div>
     </section>
-  )
-}
+  );
+};

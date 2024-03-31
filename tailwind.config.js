@@ -12,14 +12,14 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-firacode)', ...fontFamily.sans]
+        sans: ['var(--font-poppins)', ...fontFamily.sans]
       },
       colors: {
         // Configure your color palette here
         customBGColor: {
-          light: '#F0EEED',
+          light: '#112240',
           DEFAULT: '#282c33',
-          dark: '#1B2430'
+          dark: '#282C33'
         },
         fontColorTitles: {
           light: '#332C39',
@@ -29,17 +29,17 @@ module.exports = {
         fontColor: {
           light: '#332C39',
           DEFAULT: '#abb2bf',
-          dark: '#a8b2d1'
+          dark: '#8892b0'
         },
         purpleColor: {
-          light: '#681f7c',
-          DEFAULT: '#681f7c',
-          dark: '#681f7c'
+          light: '#64ffda',
+          DEFAULT: '#64ffda',
+          dark: '#64ffda'
         },
         borderColor: {
           light: '#ABB2BF',
           DEFAULT: '#ABB2BF',
-          dark: '#a8b2d1'
+          dark: '#8892b0'
         }
       }
     }

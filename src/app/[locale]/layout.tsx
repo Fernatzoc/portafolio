@@ -2,34 +2,34 @@ import './globals.css'
 import { Footer, Navbar } from './components'
 import { notFound } from 'next/navigation'
 import { useLocale, useTranslations } from 'next-intl'
-import Head from './head'
 import localFont from 'next/font/local'
 import React from 'react'
+import Head from './head'
 
-const interFont = localFont({
+const poppins = localFont({
   src: [
     {
-      path: '../../../public/assets/fonts/Inter-Regular.ttf',
+      path: '../../../public/assets/fonts/Poppins-Regular.woff2',
       weight: '400',
       style: 'normal'
     },
     {
-      path: '../../../public/assets/fonts/Inter-Medium.ttf',
+      path: '../../../public/assets/fonts/Poppins-Medium.woff2',
       weight: '500',
       style: 'medium'
     },
     {
-      path: '../../../public/assets/fonts/Inter-SemiBold.ttf',
+      path: '../../../public/assets/fonts/Poppins-SemiBold.woff2',
       weight: '600',
       style: 'semi-bold'
     },
     {
-      path: '../../../public/assets/fonts/Inter-Bold.ttf',
+      path: '../../../public/assets/fonts/Poppins-Bold.woff2',
       weight: '700',
       style: 'bold'
     }
   ],
-  variable: '--font-inter'
+  variable: '--font-poppins'
 })
 
 export default function LocaleLayout({
@@ -48,7 +48,7 @@ export default function LocaleLayout({
   }
 
   return (
-    <html lang={locale} className={`${interFont.variable} dark`}>
+    <html lang={locale} className={`${poppins.variable} dark`}>
       <head>
         <Head />
       </head>

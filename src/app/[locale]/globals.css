@@ -4,9 +4,9 @@
 
 .hashtag::before {
   content: '#';
-  color: #c778dd;
+  color: #64ffda;
 }
 
 h1 span {
-  color: #c778dd;
+  color: #64ffda;
 }

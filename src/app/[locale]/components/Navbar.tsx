@@ -1,11 +1,11 @@
 'use client'
-import Link from 'next-intl/link'
 import { usePathname } from 'next-intl/client'
 import { useEffect, useState } from 'react'
 import SunIcon from './icons/SunIcon'
 import MoonIcon from './icons/MoonIcon'
 import LanguajeIcon from './icons/LanguajeIcon'
 import LogoIcon from './icons/LogoIcon'
+import Link from 'next-intl/link'
 interface Props {
   curLocale: string
   titles: string[]
@@ -102,20 +102,18 @@ export const Navbar = (props: Props) => {
         </div>
 
         <div
-          className={`w-full ${
-            isOpen ? '' : 'hidden'
-          } lg:flex lg:w-auto lg:items-center`}
+          className={`w-full ${isOpen ? '' : 'hidden'
+            } lg:flex lg:w-auto lg:items-center`}
         >
           <div className='text-sm lg:flex-grow'>
             {titles.map((title, index) => {
               return (
                 <Link
                   href={`/${paths[index]}`}
-                  className={`hashtag mt-4 mr-4 block text-fontColor-light dark:text-fontColor-dark hover:text-purpleColor dark:hover:text-white lg:mt-0 lg:inline-block ${
-                    pathname === `/${paths[index]}`
-                      ? 'text-purpleColor dark:text-white'
-                      : ''
-                  }`}
+                  className={`hashtag mt-4 mr-4 block text-fontColor-light dark:text-fontColor-dark hover:text-purpleColor dark:hover:text-white lg:mt-0 lg:inline-block ${pathname === `/${paths[index]}`
+                    ? 'text-purpleColor dark:text-white'
+                    : ''
+                    }`}
                   key={index}
                 >
                   {title}
